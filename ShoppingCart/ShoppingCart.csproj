@@ -28,6 +28,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <IncludeIisSettings>false</IncludeIisSettings>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -39,6 +40,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="ShoppingWebAPI">
+      <HintPath>..\ShoppingWebAPI\bin\ShoppingWebAPI.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -65,10 +69,30 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App\app.js" />
+    <Content Include="App\Order\Controllers\OrderController.js" />
+    <Content Include="App\Order\Partials\order.html" />
+    <Content Include="App\Order\Services\ProductService.js" />
+    <Content Include="App\route.js" />
+    <Content Include="index.html" />
+    <Content Include="Scripts\angular-ui-router.min.js" />
+    <Content Include="Scripts\angular.min.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-1.11.3.min.js" />
+    <Content Include="Scripts\ui-bootstrap-tpls-0.13.0.min.js" />
+    <Content Include="Styles\bootstrapflatly.min.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App\Delivery\Controllers\" />
+    <Folder Include="App\Delivery\Partials\" />
+    <Folder Include="App\Delivery\Services\" />
+    <Folder Include="App\Status\Controllers\" />
+    <Folder Include="App\Status\Partials\" />
+    <Folder Include="App\Status\Services\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
