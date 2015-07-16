@@ -15,9 +15,14 @@ namespace ShoppingWebAPI
         {
             AreaRegistration.RegisterAllAreas();
             GlobalConfiguration.Configure(WebApiConfig.Register);
-            /*FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
+            FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
-            BundleConfig.RegisterBundles(BundleTable.Bundles);*/
+            BundleConfig.RegisterBundles(BundleTable.Bundles);
+            //RouteTable.Routes.MapHttpRoute(
+            //  name: "DefaultApi",
+            //  routeTemplate: "api/{controller}/{id}",
+            //  defaults: new { id = System.Web.Http.RouteParameter.Optional }
+            //);
         }
     }
 }
