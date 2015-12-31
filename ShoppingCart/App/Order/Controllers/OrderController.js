@@ -22,10 +22,7 @@
         $scope.model = viewmodel;
         ProductService.getProduct().then(function (data) {
             //Copying products from product service, else undefined
-            angular.isDefined($scope.model.products) ? angular.copy(data, $scope.model.products) : void (0);
-            /* $scope.model.product.image = data.productImage;
-             $scope.model.product.modelNo = data.modelNo;
-             $scope.model.product.price = data.price;*/
+            angular.isDefined($scope.model.products) ? angular.copy(data, $scope.model.products) : void (0);            
         });
     }]);
 })();
